@@ -41,12 +41,10 @@ function App() {
 			await fetch("https://disease.sh/v3/covid-19/countries")
 				.then((response) => response.json())
 				.then((data) => {
-					// console.log(data);
 					const countriesData = data.map((data) => ({
 						name: data.country, // United States, Cuba
 						countryCode: data.countryInfo.iso2, // US, CU
 					}));
-					// localStorage.setItem("countries", JSON.stringify(countriesData));
 					const sortedData = sortData(data);
 					setMapCountries(data); // Save all countries data to be used on the map component
 					setTableData(sortedData);
@@ -54,10 +52,6 @@ function App() {
 				});
 		};
 
-		// if (localStorage.key('countries') !== null) {
-		//   setCountries(JSON.parse(localStorage.getItem('countries')))
-		// } else {
-		// }
 		getCountriesData();
 	}, []);
 
