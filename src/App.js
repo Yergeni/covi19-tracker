@@ -100,7 +100,7 @@ function App() {
 			<div className="app__left">
 				{/* Header (Title + Select input) */}
 				<div className="app__header">
-					<h1>COVI-19 TRACKER</h1>
+					<h1>COVID-19 TRACKER</h1>
 					<FormControl className="app__dropdown" variant="outlined">
 						<Select
 							value={selectedCountry}
